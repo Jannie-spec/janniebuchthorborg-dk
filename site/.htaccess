@@ -17,6 +17,7 @@ RewriteRule ^_aida-backup(/|$) - [F,L]
 
 # Gamle Aida-adresser
 RewriteRule ^__wsb/ - [G,L]
+RewriteRule ^blog/?$ https://janniebuchthorborg.dk/historier [R=301,L]
 RewriteRule ^(cookiepolitik|privatlivspolitik)/?$ https://janniebuchthorborg.dk/ [R=301,L]
 
 # Adresser med .html eller skråstreg til sidst -> den rene adresse
