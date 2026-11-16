@@ -3,6 +3,9 @@
 assets/fonts/source-sans.woff2
 assets/fonts/source-serif-italic.woff2
 assets/fonts/source-serif.woff2
+assets/img/gudhjem-havn.jpg
+assets/img/klippen-terrasse.jpg
+assets/img/solnedgang.jpg
 assets/site.css
 historier.html
 index.html
