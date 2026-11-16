@@ -224,7 +224,7 @@ OM = page("om-jannie", "Om Jannie – Jannie Buch Thorborg",
 <p class="lede">Jeg er iværksætteren, der aldrig rigtig har holdt mig til én branche. Fra netværk og systemer til møbler, markedsføring og i dag hoteldrift på Bornholm. Den røde tråd er nysgerrighed på, hvordan ting hænger sammen – og lyst til at bygge dem selv.</p>
 </div></section>
 <section><div class="wrap split">
-<figure class="photo"><img src="{L(IMG + 'jannie-og-martin.jpg')}" alt="Jannie og Martin Buch Thorborg" loading="lazy"><figcaption>Med Martin, som jeg driver hotellerne sammen med.</figcaption></figure>
+<figure class="photo"><img src="{L(IMG + 'jannie-og-martin.jpg')}" alt="Jannie og Martin Buch Thorborg" loading="lazy"><figcaption>Med min mand, Martin.</figcaption></figure>
 <div class="steps">
 <div><h3>Hotelbranchen i blodet</h3><p>Da jeg var lille, drev mine forældre i en periode sæsonforretninger i Blåvand: et hotel, to restauranter og et populært diskotek. Så hotel- og restaurationsbranchen kom ind under huden fra en tidlig alder.</p></div>
 <div><h3>IT og netværk</h3><p>Jeg startede min karriere i IT-branchen, hvor jeg arbejdede med netværk og teknik. Den tekniske forståelse er stadig en del af måden, jeg griber nye projekter an på: Jeg kan lide at forstå systemet, før jeg bygger videre på det.</p></div>
@@ -310,7 +310,7 @@ PRESSE = page("presse", "Presse – Jannie Buch Thorborg",
 <div class="btns"><a class="btn" href="mailto:{EMAIL}">Skriv til {EMAIL}</a></div>
 </div></section>
 <section><div class="wrap kgrid">
-<div class="kbox"><h2>Kort bio</h2><p>Jannie Buch Thorborg er iværksætter og hotelejer. Sammen med sin mand, Martin Buch Thorborg, står hun bag Klippen Hotel i Gudhjem med Grevens Dal, Therns og Skt. Jørgens Gaard, baren Jylkat, butikken Førder og Therns Hostel. Hun har en baggrund i IT og bruger AI i den daglige drift.</p></div>
+<div class="kbox"><h2>Kort bio</h2><p>Jannie Buch Thorborg er iværksætter og hotelejer. Hun står bag Klippen Hotel i Gudhjem med Grevens Dal, Therns og Skt. Jørgens Gaard, baren Jylkat, butikken Førder og Therns Hostel. Hun har en baggrund i IT og bruger AI i den daglige drift.</p></div>
 <div class="kbox"><h2>Fakta</h2><ul class="facts">
 <li>Opvokset med forældre, der drev hotel, restauranter og diskotek i Blåvand</li>
 <li>Baggrund i IT, netværk og digital markedsføring</li>
@@ -323,7 +323,7 @@ PRESSE = page("presse", "Presse – Jannie Buch Thorborg",
 <section class="pressbio"><div class="wrap narrow-wrap">
 <h2>Lang bio</h2>
 <p>Jannie Buch Thorborg voksede op i Blåvand, hvor hendes forældre drev hotel, restauranter og et diskotek. Hun startede selv sin karriere i IT og netværk og stiftede sin første virksomhed, mens hun var på barsel. Siden har hun haft virksomheder i Tyskland, Thailand og Spanien.</p>
-<p>I 2020 åbnede hun butikken Førder i Gudhjem, og året efter overtog hun og Martin Buch Thorborg Klippen. I dag samler Klippen Hotel tre hoteller i Gudhjem: Grevens Dal, Therns og Skt. Jørgens Gaard. Dertil kommer baren Jylkat ved havnen, Førder og Therns Hostel. I 2022 fulgte TV-serien Buch Thorborg parret, mens de gjorde hotellerne klar til sæsonen.</p>
+<p>I 2020 åbnede hun butikken Førder i Gudhjem, og året efter overtog hun Klippen. I dag samler Klippen Hotel tre hoteller i Gudhjem: Grevens Dal, Therns og Skt. Jørgens Gaard. Dertil kommer baren Jylkat ved havnen, Førder og Therns Hostel. I 2022 fulgte TV-serien Buch Thorborg hende og hendes mand, Martin, mens de gjorde hotellerne klar til sæsonen.</p>
 <p>Jannie bruger en stor del af sin tid på at gøre virksomhederne bedre med AI, fra hjemmesider og synlighed til gæsteinformation og arbejdsgange. Hun er desuden medejer af iværksætterforummet Amino, kapitalplatformen Capino og virksomhedsbørsen Saxis.</p>
 </div></section>
 <section class="presspics"><div class="wrap">
