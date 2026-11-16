@@ -266,19 +266,19 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 
 POSTS = [
     dict(slug="eget-gavekortsystem", dato="16. november 2026", iso="2026-11-16",
-         titel="Vi har bygget vores eget gavekortsystem – og det gør lidt ondt",
-         intro="Vi har solgt vores gavekort gennem Life Peaks og været rigtig glade for det. Nu har vi bygget vores eget på en dag med AI.",
-         tekst="""<p>Vi har solgt vores gavekort gennem Life Peaks, og jeg har været rigtig glad for dem. Det har virket, de har været søde at have med at gøre, og jeg har anbefalet dem til andre.</p>
-<p>Men de tager en procentdel af hvert gavekort, vi sælger. Når man har tre hoteller, en bar, en butik og snart en restaurant, bliver det til mange penge over et år.</p>
-<p>Så i dag satte jeg mig ned og byggede vores eget system sammen med AI. Det tog en dag.</p>
+         titel="Jeg har bygget mit eget gavekortsystem – og det gør lidt ondt",
+         intro="Jeg har solgt vores gavekort gennem Life Peaks og været rigtig glad for det. Nu har jeg bygget mit eget på en dag med AI.",
+         tekst="""<p>Jeg har solgt vores gavekort gennem Life Peaks, og jeg har været rigtig glad for dem. Det har virket, de har været søde at have med at gøre, og jeg har anbefalet dem til andre.</p>
+<p>Men de tager en procentdel af hvert gavekort, jeg sælger. Når man har tre hoteller, en bar, en butik og snart en restaurant, bliver det til mange penge over et år.</p>
+<p>Så i dag satte jeg mig ned og byggede mit eget system sammen med AI. Det tog en dag.</p>
 <h2>Det kan det</h2>
 <p>Man vælger et gavekort til et ophold eller et beløb og betaler med kort eller MobilePay. Bagefter kan man sende det til sig selv og printe det, sende det direkte til en ven på en bestemt dato eller få det pakket pænt ind og sendt med posten for 49 kr.</p>
-<p>Maiken i receptionen kan se alle gavekort, finde kunderne og indløse kortene i vores eget admin. Og gavekortene ser ud, som vi selv vil have dem.</p>
-<p>De gavekort, folk allerede har fra Life Peaks, gælder selvfølgelig stadig. Dem indløser vi i Life Peaks, som vi plejer.</p>
+<p>Maiken i receptionen kan se alle gavekort, finde kunderne og indløse kortene i et admin, jeg også har bygget. Og gavekortene ser ud, som jeg selv vil have dem.</p>
+<p>De gavekort, folk allerede har fra Life Peaks, gælder selvfølgelig stadig. Dem indløser vi stadig i Life Peaks.</p>
 <h2>Lidt ondt i hjertet</h2>
-<p>Det gør faktisk lidt ondt at sige farvel. Life Peaks har ikke gjort noget forkert. Men det er præcis det, AI ændrer lige nu for små virksomheder som vores. Ting, vi før måtte betale andre for, kan vi nu lave selv, hurtigt og på vores egen måde.</p>
+<p>Det gør faktisk lidt ondt at sige farvel. Life Peaks har ikke gjort noget forkert. Men det er præcis det, AI ændrer lige nu for små virksomheder som vores. Ting, jeg før måtte betale andre for, kan jeg nu lave selv, hurtigt og på vores egen måde.</p>
 <p>Jeg tror, mange små virksomheder slet ikke har opdaget det endnu.</p>
-<p>Vil du høre mere om, hvordan vi gjorde, så skriv endelig til mig.</p>"""),
+<p>Vil du høre mere om, hvordan jeg gjorde, så skriv endelig til mig.</p>"""),
 ]
 
 
@@ -306,7 +306,7 @@ PRESSE = page("presse", "Presse – Jannie Buch Thorborg",
  "Pressemateriale om Jannie Buch Thorborg: kort og lang bio, fakta, pressebilleder og kontakt.",
  f"""<section class="phead"><div class="wrap">
 <h1>Presse</h1>
-<p class="lede">Jeg stiller gerne op, når det handler om hotellerne i Gudhjem, turisme på Bornholm, iværksætteri eller AI i små virksomheder.</p>
+<p class="lede">Jeg stiller gerne op, når det handler om hotellerne i Gudhjem, turisme på Bornholm, iværksætteri eller AI i små virksomheder. Jeg har blandt andet medvirket i Deadline, Go' morgen Danmark og mange gange i lokal-tv og radio.</p>
 <div class="btns"><a class="btn" href="mailto:{EMAIL}">Skriv til {EMAIL}</a></div>
 </div></section>
 <section><div class="wrap kgrid">
