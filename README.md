@@ -11,3 +11,5 @@ Udgiv ALDRIG fra Aida-editoren igen – den overskriver siden.
 
 Statistik: Cloudflare Web Analytics (ingen cookies, intet cookie-banner).
 Aidas filer gemmes på webhotellet i `/_aida-backup/` (spærret for besøgende).
+
+Portrætbillederne (assets/img/jannie-*.jpg) er hentet fra Jannies Instagram og ligger kun på serveren, ikke i repoet. Upload dist/ overskriver dem ikke.

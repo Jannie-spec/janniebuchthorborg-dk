@@ -8,9 +8,11 @@ assets/img/klippen-terrasse.jpg
 assets/img/solnedgang.jpg
 assets/site.css
 historier.html
+historier/eget-gavekortsystem.html
 index.html
 kontakt.html
 mine-steder.html
 om-jannie.html
+presse.html
 robots.txt
 sitemap.xml

@@ -14,12 +14,12 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else ""
 DIST = ROOT / ("dist" if not BASE else "dist" + BASE.replace("/", "-"))
 DOMAIN = "https://janniebuchthorborg.dk"
 CF_TOKEN = "88172b9894d4401780304b7d6843ed58"   # Cloudflare Web Analytics (cookiefri)
-VER = "5"
+VER = "6"
 EMAIL = "jannie@hotelklippen.dk"
 SOME = [("Instagram", "https://www.instagram.com/janniebuch"), ("TikTok", "https://www.tiktok.com/@janniebuch"),
         ("Facebook", "https://www.facebook.com/jannie.buch.1/"), ("LinkedIn", "https://www.linkedin.com/in/jannie-buch/"),
         ("X", "https://x.com/janniebuchace"), ("YouTube", "https://www.youtube.com/channel/UCEDfdpfjWoxPIUrtXDjT_kg")]
-NAV = [("om-jannie", "Om Jannie"), ("mine-steder", "Mine steder"), ("historier", "Historier"), ("kontakt", "Kontakt")]
+NAV = [("om-jannie", "Om Jannie"), ("mine-steder", "Mine steder"), ("historier", "Historier"), ("presse", "Presse"), ("kontakt", "Kontakt")]
 IMG = "/assets/img/"
 
 
@@ -36,8 +36,7 @@ def page(slug, title, desc, body, dark_top=False):
     ld = {"@context": "https://schema.org", "@type": "Person", "@id": DOMAIN + "/#jannie", "name": "Jannie Buch Thorborg",
           "url": DOMAIN + "/", "jobTitle": "Iværksætter og hotelejer", "email": "mailto:" + EMAIL,
           "description": "Iværksætter, IT-nørd og hotelejer på Bornholm.",
-          "image": DOMAIN + IMG + "gudhjem-havn.jpg",
-          "address": {"@type": "PostalAddress", "addressLocality": "Gudhjem", "addressRegion": "Bornholm", "addressCountry": "DK"},
+          "image": DOMAIN + IMG + "jannie-australien.jpg",
           "knowsAbout": ["Iværksætteri", "IT", "Netværk", "Digital markedsføring", "SEO", "AI", "Hoteldrift"],
           "worksFor": [{"@type": "Hotel", "name": "Klippen Hotel", "url": "https://www.hotelklippen.com"},
                        {"@type": "BarOrPub", "name": "Jylkat", "url": "https://jylkat-bar.dk"},
@@ -182,11 +181,12 @@ HOME = page("", "Jannie Buch Thorborg – iværksætter og hotelejer på Bornhol
 </section>
 
 <section class="intro"><div class="wrap intro-in">
-<p class="big">Jeg startede i IT og netværk. I dag driver jeg hoteller, en bar og en butik i Gudhjem – og bruger teknik og AI til at gøre det hele bedre.</p>
+<div class="me"><img src="{L(IMG + 'jannie-australien.jpg')}" alt="Jannie Buch Thorborg" loading="lazy"></div>
+<div class="intro-txt"><p class="big">Jeg startede i IT og netværk. I dag driver jeg hoteller, en bar og en butik i Gudhjem – og bruger teknik og AI til at gøre det hele bedre.</p>
 <div class="intro-side">
 <p>Jeg har min baggrund i IT og digital markedsføring og bruger den forståelse i alt, jeg bygger. Sammen med mit team udvikler jeg steder og virksomheder, især i Gudhjem, med fokus på teknik, udvikling og drift.</p>
 <p>Det, der binder det hele sammen, er nysgerrigheden og lysten til at bygge noget, der føles rigtigt.</p>
-</div>
+</div></div>
 </div></section>
 
 <section class="places-sec"><div class="wrap">
@@ -224,7 +224,7 @@ OM = page("om-jannie", "Om Jannie – Jannie Buch Thorborg",
 <p class="lede">Jeg er iværksætteren, der aldrig rigtig har holdt mig til én branche. Fra netværk og systemer til møbler, markedsføring og i dag hoteldrift på Bornholm. Den røde tråd er nysgerrighed på, hvordan ting hænger sammen – og lyst til at bygge dem selv.</p>
 </div></section>
 <section><div class="wrap split">
-<div class="photo"><img src="{L(IMG + 'solnedgang.jpg')}" alt="Solnedgang over Østersøen set fra Gudhjem" loading="lazy"></div>
+<figure class="photo"><img src="{L(IMG + 'jannie-og-martin.jpg')}" alt="Jannie og Martin Buch Thorborg" loading="lazy"><figcaption>Med Martin, som jeg driver hotellerne sammen med.</figcaption></figure>
 <div class="steps">
 <div><h3>Hotelbranchen i blodet</h3><p>Da jeg var lille, drev mine forældre i en periode sæsonforretninger i Blåvand: et hotel, to restauranter og et populært diskotek. Så hotel- og restaurationsbranchen kom ind under huden fra en tidlig alder.</p></div>
 <div><h3>IT og netværk</h3><p>Jeg startede min karriere i IT-branchen, hvor jeg arbejdede med netværk og teknik. Den tekniske forståelse er stadig en del af måden, jeg griber nye projekter an på: Jeg kan lide at forstå systemet, før jeg bygger videre på det.</p></div>
@@ -264,20 +264,75 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 </div></section>
 {contact_band()}""")
 
+POSTS = [
+    dict(slug="eget-gavekortsystem", dato="16. november 2026", iso="2026-11-16",
+         titel="Vi har bygget vores eget gavekortsystem – og det gør lidt ondt",
+         intro="Vi har solgt vores gavekort gennem Life Peaks og været rigtig glade for det. Nu har vi bygget vores eget på en dag med AI.",
+         tekst="""<p>Vi har solgt vores gavekort gennem Life Peaks, og jeg har været rigtig glad for dem. Det har virket, de har været søde at have med at gøre, og jeg har anbefalet dem til andre.</p>
+<p>Men de tager en procentdel af hvert gavekort, vi sælger. Når man har tre hoteller, en bar, en butik og snart en restaurant, bliver det til mange penge over et år.</p>
+<p>Så i dag satte jeg mig ned og byggede vores eget system sammen med AI. Det tog en dag.</p>
+<h2>Det kan det</h2>
+<p>Man vælger et gavekort til et ophold eller et beløb og betaler med kort eller MobilePay. Bagefter kan man sende det til sig selv og printe det, sende det direkte til en ven på en bestemt dato eller få det pakket pænt ind og sendt med posten for 49 kr.</p>
+<p>Maiken i receptionen kan se alle gavekort, finde kunderne og indløse kortene i vores eget admin. Og gavekortene ser ud, som vi selv vil have dem.</p>
+<p>De gavekort, folk allerede har fra Life Peaks, gælder selvfølgelig stadig. Dem indløser vi i Life Peaks, som vi plejer.</p>
+<h2>Lidt ondt i hjertet</h2>
+<p>Det gør faktisk lidt ondt at sige farvel. Life Peaks har ikke gjort noget forkert. Men det er præcis det, AI ændrer lige nu for små virksomheder som vores. Ting, vi før måtte betale andre for, kan vi nu lave selv, hurtigt og på vores egen måde.</p>
+<p>Jeg tror, mange små virksomheder slet ikke har opdaget det endnu.</p>
+<p>Vil du høre mere om, hvordan vi gjorde, så skriv endelig til mig.</p>"""),
+]
+
+
+def post_page(p):
+    return page("historier/" + p["slug"], p["titel"] + " – Jannie Buch Thorborg", p["intro"],
+ f"""<article class="post"><div class="wrap narrow-wrap">
+<p class="crumb"><a href="{L('/historier')}">Historier</a> · <time datetime="{p['iso']}">{p['dato']}</time></p>
+<h1>{p['titel']}</h1>
+<div class="post-body">{p['tekst']}</div>
+<p class="post-end"><a class="btn" href="mailto:{EMAIL}">Skriv til mig</a></p>
+</div></article>""")
+
+
 HIST = page("historier", "Historier – Jannie Buch Thorborg",
- "Kommende historier om iværksætteri, om stederne på Bornholm, og om hvordan Jannie bruger AI i sine egne virksomheder.",
+ "Jannie Buch Thorborg skriver om iværksætteri, hotellerne i Gudhjem og hvordan hun bruger AI i sine egne virksomheder.",
  f"""<section class="phead"><div class="wrap">
-<h1>Historier fra Bornholm og bagved</h1>
-<p class="lede">Om vejen fra IT til hoteldrift, om stederne i Gudhjem og om hverdagen bag dem. De første historier er på vej.</p>
+<h1>Historier</h1>
+<p class="lede">Om hverdagen bag hotellerne i Gudhjem, om at være iværksætter og om hvordan jeg bruger AI i mine egne virksomheder.</p>
 </div></section>
 <section><div class="wrap">
-<ol class="soon">
-<li><span class="yr">Snart</span><h3>Fra IT og digital markedsføring til hoteller i Gudhjem</h3></li>
-<li><span class="yr">Snart</span><h3>Hvordan Grevens Dal, Therns og Skt. Jørgens Gaard får hver deres identitet</h3></li>
-<li><span class="yr">Snart</span><h3>Hverdagen bag Jylkat og Førder</h3></li>
-<li><span class="yr">Snart</span><h3>Sådan bruger jeg AI i mine egne virksomheder</h3></li>
-</ol>
-<p class="lede" style="margin-top:36px">Følg med på <a href="https://www.instagram.com/janniebuch">Instagram</a> og <a href="https://www.linkedin.com/in/jannie-buch/">LinkedIn</a>, så du ser dem først.</p>
+<div class="postlist">{''.join(f'<a class="pcard" href="{L("/historier/" + p["slug"])}"><time datetime="{p["iso"]}">{p["dato"]}</time><h2>{p["titel"]}</h2><p>{p["intro"]}</p><span class="more">Læs historien</span></a>' for p in POSTS)}</div>
+</div></section>""")
+
+PRESSE = page("presse", "Presse – Jannie Buch Thorborg",
+ "Pressemateriale om Jannie Buch Thorborg: kort og lang bio, fakta, pressebilleder og kontakt.",
+ f"""<section class="phead"><div class="wrap">
+<h1>Presse</h1>
+<p class="lede">Jeg stiller gerne op, når det handler om hotellerne i Gudhjem, turisme på Bornholm, iværksætteri eller AI i små virksomheder.</p>
+<div class="btns"><a class="btn" href="mailto:{EMAIL}">Skriv til {EMAIL}</a></div>
+</div></section>
+<section><div class="wrap kgrid">
+<div class="kbox"><h2>Kort bio</h2><p>Jannie Buch Thorborg er iværksætter og hotelejer. Sammen med sin mand, Martin Buch Thorborg, står hun bag Klippen Hotel i Gudhjem med Grevens Dal, Therns og Skt. Jørgens Gaard, baren Jylkat, butikken Førder og Therns Hostel. Hun har en baggrund i IT og bruger AI i den daglige drift.</p></div>
+<div class="kbox"><h2>Fakta</h2><ul class="facts">
+<li>Opvokset med forældre, der drev hotel, restauranter og diskotek i Blåvand</li>
+<li>Baggrund i IT, netværk og digital markedsføring</li>
+<li>Har haft virksomheder i Danmark, Tyskland, Thailand og Spanien</li>
+<li>Åbnede Førder i Gudhjem i 2020 og Klippen i 2021</li>
+<li>Medvirkede i TV-serien Buch Thorborg i 2022</li>
+<li>Medejer af Amino, Capino og Saxis</li>
+</ul></div>
+</div></section>
+<section class="pressbio"><div class="wrap narrow-wrap">
+<h2>Lang bio</h2>
+<p>Jannie Buch Thorborg voksede op i Blåvand, hvor hendes forældre drev hotel, restauranter og et diskotek. Hun startede selv sin karriere i IT og netværk og stiftede sin første virksomhed, mens hun var på barsel. Siden har hun haft virksomheder i Tyskland, Thailand og Spanien.</p>
+<p>I 2020 åbnede hun butikken Førder i Gudhjem, og året efter overtog hun og Martin Buch Thorborg Klippen. I dag samler Klippen Hotel tre hoteller i Gudhjem: Grevens Dal, Therns og Skt. Jørgens Gaard. Dertil kommer baren Jylkat ved havnen, Førder og Therns Hostel. I 2022 fulgte TV-serien Buch Thorborg parret, mens de gjorde hotellerne klar til sæsonen.</p>
+<p>Jannie bruger en stor del af sin tid på at gøre virksomhederne bedre med AI, fra hjemmesider og synlighed til gæsteinformation og arbejdsgange. Hun er desuden medejer af iværksætterforummet Amino, kapitalplatformen Capino og virksomhedsbørsen Saxis.</p>
+</div></section>
+<section class="presspics"><div class="wrap">
+<h2>Pressebilleder</h2>
+<p class="lede">Billederne må bruges i omtale af Jannie Buch Thorborg og hendes virksomheder.</p>
+<div class="pics">
+<figure><img src="{L(IMG + 'jannie-australien.jpg')}" alt="Jannie Buch Thorborg" loading="lazy"><figcaption><a href="{L(IMG + 'jannie-australien.jpg')}" download>Hent billede</a></figcaption></figure>
+<figure><img src="{L(IMG + 'jannie-og-martin.jpg')}" alt="Jannie og Martin Buch Thorborg" loading="lazy"><figcaption>Jannie og Martin Buch Thorborg · <a href="{L(IMG + 'jannie-og-martin.jpg')}" download>Hent billede</a></figcaption></figure>
+</div>
 </div></section>""")
 
 KONTAKT = page("kontakt", "Kontakt – Jannie Buch Thorborg",
@@ -304,10 +359,13 @@ if __name__ == "__main__":
     shutil.copytree(ROOT / "site", DIST)
     if BASE:
         (DIST / ".htaccess").unlink()
-    for name, html in [("index", HOME), ("om-jannie", OM), ("mine-steder", STEDER), ("historier", HIST), ("kontakt", KONTAKT), ("404", NOTFOUND)]:
+    pages = [("index", HOME), ("om-jannie", OM), ("mine-steder", STEDER), ("historier", HIST), ("presse", PRESSE), ("kontakt", KONTAKT), ("404", NOTFOUND)]
+    pages += [("historier/" + p["slug"], post_page(p)) for p in POSTS]
+    for name, html in pages:
+        (DIST / f"{name}.html").parent.mkdir(parents=True, exist_ok=True)
         (DIST / f"{name}.html").write_text(html, encoding="utf-8")
     today = date.today().isoformat()
-    urls = "".join(f"<url><loc>{DOMAIN}/{s}</loc><lastmod>{today}</lastmod></url>" for s in ["", "om-jannie", "mine-steder", "historier", "kontakt"])
+    urls = "".join(f"<url><loc>{DOMAIN}/{s}</loc><lastmod>{today}</lastmod></url>" for s in ["", "om-jannie", "mine-steder", "historier", "presse", "kontakt"] + ["historier/" + p["slug"] for p in POSTS])
     (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + "</urlset>\n", encoding="utf-8")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /_ny/\nDisallow: /_aida-backup/\n\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")
     if not BASE:

@@ -228,3 +228,34 @@ footer .slist li{padding:3px 0}
 footer .slist a{color:#fff}
 footer .slist a:hover{text-decoration:underline}
 @media (max-width:700px){.kgrid{grid-template-columns:1fr}}
+
+/* v5: billeder af Jannie, presse, historier */
+.intro-in{grid-template-columns:minmax(220px,.8fr) 1.6fr;align-items:center}
+.intro-txt .big{margin-bottom:22px}
+.me img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px}
+.photo figcaption{font-size:.95rem;color:var(--soft);padding:12px 4px 0}
+.photo{border-radius:0;overflow:visible}
+.photo img{border-radius:20px}
+.facts{margin:0;padding-left:1.1em;color:var(--soft)}
+.facts li{padding:4px 0}
+.narrow-wrap{max-width:760px}
+.pressbio p{color:var(--soft);margin-bottom:14px}
+.presspics{background:var(--sten)}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px}
+.pics figcaption{padding-top:10px;color:var(--soft);font-size:.95rem}
+.pics a{color:var(--groen);font-weight:600}
+.postlist{display:grid;gap:20px}
+.pcard{display:block;background:var(--sten);border-radius:20px;padding:32px;text-decoration:none;transition:transform .2s}
+.pcard:hover{transform:translateY(-3px)}
+.pcard time,.crumb{color:var(--soft);font-size:.95rem}
+.pcard h2{font-size:1.6rem;margin:6px 0 10px}
+.pcard p{color:var(--soft);margin-bottom:16px}
+.post{padding-top:calc(76px + clamp(48px,7vw,96px));padding-bottom:clamp(56px,7vw,96px)}
+.post h1{font-size:clamp(2.1rem,4.4vw,3.2rem);margin:12px 0 28px}
+.crumb a{color:var(--groen)}
+.post-body p{font-size:1.15rem;margin-bottom:18px}
+.post-body h2{font-size:1.5rem;margin:36px 0 12px}
+.post-end{margin-top:36px}
+@media (max-width:1000px){.intro-in{grid-template-columns:1fr}.me{max-width:420px}}
+@media (max-width:700px){.pics{grid-template-columns:1fr}}
