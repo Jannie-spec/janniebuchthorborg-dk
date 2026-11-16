@@ -14,7 +14,7 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else ""
 DIST = ROOT / ("dist" if not BASE else "dist" + BASE.replace("/", "-"))
 DOMAIN = "https://janniebuchthorborg.dk"
 CF_TOKEN = "88172b9894d4401780304b7d6843ed58"   # Cloudflare Web Analytics (cookiefri)
-VER = "3"
+VER = "4"
 EMAIL = "jannie@hotelklippen.dk"
 SOME = [("Instagram", "https://www.instagram.com/janniebuch"), ("TikTok", "https://www.tiktok.com/@janniebuch"),
         ("Facebook", "https://www.facebook.com/jannie.buch.1/"), ("LinkedIn", "https://www.linkedin.com/in/jannie-buch/"),
@@ -45,7 +45,7 @@ def page(slug, title, desc, body, dark_top=False):
                        {"@type": "Hostel", "name": "Therns Hostel", "url": "https://www.therns.dk"}],
           "sameAs": [u for _, u in SOME]}
     robots = '<meta name="robots" content="noindex">\n' if BASE or slug == "404" else ""
-    some = "".join(f'<a href="{u}" rel="me noopener">{n}</a>' for n, u in SOME)
+    some = "".join(f'<li><a href="{u}" rel="me noopener">{n}</a></li>' for n, u in SOME)
     return f"""<!DOCTYPE html>
 <html lang="da">
 <head>
@@ -59,7 +59,7 @@ def page(slug, title, desc, body, dark_top=False):
 <meta property="og:image" content="{DOMAIN}{IMG}gudhjem-havn.jpg"><meta property="og:locale" content="da_DK">
 <meta name="theme-color" content="#22392c">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322392c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='28' fill='%23e6dccb' text-anchor='middle'%3EJB%3C/text%3E%3C/svg%3E">
-<link rel="preload" href="{L('/assets/fonts/source-serif.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{L('/assets/fonts/source-sans.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{L('/assets/site.css')}?v={VER}">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
@@ -73,8 +73,8 @@ def page(slug, title, desc, body, dark_top=False):
 {body}
 </main>
 <footer><div class="wrap">
-<div class="fbig"><p class="fname">Jannie Buch Thorborg</p><p>Iværksætter, IT-nørd og hotelejer.<br>Gudhjem, Bornholm · 55°12′N 14°58′Ø</p></div>
-<div><p class="flabel">Følg med</p><div class="some">{some}</div></div>
+<div class="fbig"><p class="fname">Jannie Buch Thorborg</p><p>Iværksætter, IT-nørd og hotelejer.</p></div>
+<div><p class="flabel">Følg med</p><ul class="slist">{some}</ul></div>
 <div><p class="flabel">Skriv til mig</p><p><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
 </div></footer>
 <script>
@@ -90,16 +90,22 @@ var r=w.getAttribute('data-roles').split('|'),i=0;setInterval(function(){{i=(i+1
 
 # ---------- indhold ----------
 PLACES = [
-    dict(n="Klippen Hotel", k="Hoteller i Gudhjem", img=IMG + "klippen-terrasse.jpg", alt="Terrassen på Klippen Hotel med udsigt over Østersøen",
-         d="Tre særskilte overnatningssteder i Gudhjem – Grevens Dal, Therns og Skt. Jørgens Gaard – under samme tag. Alle tre er renoveret i 2026.",
-         b="Besøg Klippen Hotel", u="https://www.hotelklippen.com/"),
+    dict(n="Klippen Grevens Dal", k="Klippen Hotel", img="https://static.wixstatic.com/media/5cff14_1029a7b3bf0649f0ad2d07a48d6e06e7~mv2.jpg/v1/fill/w_1000,h_750,q_85/grevens-dal.jpg", alt="Klippen Grevens Dal med udsigt over Østersøen",
+         d="Hotellet på klippen over Gudhjem – med havudsigt fra terrassen og morgenmad med udsigt.",
+         b="Se Grevens Dal", u="https://www.hotelklippen.com/grevens-dal-gudhjem"),
+    dict(n="Klippen Therns", k="Klippen Hotel", img="https://static.wixstatic.com/media/5cff14_b65fcc0177b94fbdbe156d2e14535509~mv2.jpeg/v1/fill/w_1000,h_750,q_85/therns.jpg", alt="Klippen Therns i Gudhjem",
+         d="Det hvide hotel midt i Gudhjem, tæt på havnen, butikkerne og restauranterne.",
+         b="Se Therns", u="https://www.hotelklippen.com/therns-hotel-gudhjem"),
+    dict(n="Klippen Skt. Jørgens Gaard", k="Klippen Hotel", img="https://static.wixstatic.com/media/5cff14_9a2037fbb44947e8acf5610e9fca4b57~mv2.jpg/v1/fill/w_1000,h_750,q_85/skt-joergens-gaard.jpg", alt="Skt. Jørgens Gaard i Gudhjem en sommeraften",
+         d="Det gamle vandrerhjem ved havnen, nu et hotel i gammel badehotelstil – med Jylkat lige uden for døren.",
+         b="Se Skt. Jørgens Gaard", u="https://www.hotelklippen.com/skt-joergens-gaard-gudhjem"),
     dict(n="Jylkat", k="Baren ved havnen", img="https://jylkat-bar.dk/media/2026/09/Jylkat20aften20hygge20.jpg", alt="Aftenstemning på Jylkat i Gudhjem",
          d="En afslappet bar ved Gudhjem Havn med cocktails, vin og barmad – og musikbingo, når mørket falder på.",
          b="Besøg Jylkat", u="https://jylkat-bar.dk/"),
     dict(n="Førder", k="Butik og reception", img="https://foerder.dk/onewebmedia/Udefra.jpg", alt="Førder i Brøddegade 28, Gudhjem",
          d="Butik med bornholmske varer i et gammelt bindingsværkshus – og fælles reception for alle stederne.",
          b="Besøg Førder", u="https://foerder.dk/"),
-    dict(n="Therns Hostel", k="Vandrerhjemmet", img="", alt="",
+    dict(n="Therns Hostel", k="Vandrerhjemmet", img="https://therns.dk/wp-content/uploads/2022/08/overnatning-bornholm-hotel-nordlandet.webp", alt="Therns i Gudhjem",
          d="Vandrerhjemmet i Gudhjem – et enkelt sted at sove tæt på havnen og klipperne.",
          b="Besøg Therns Hostel", u="https://www.therns.dk/"),
     dict(n="Det Gamle Bryggeri", k="Sommerhuset", img="https://a0.muscache.com/im/pictures/dd9570e8-12f6-4079-a922-c1681b27099a.jpg?im_w=1200", alt="Det Gamle Bryggeri i Bryggerstræde, Gudhjem",
@@ -110,17 +116,23 @@ OTHER = [("Amino", "Iværksætterforum, hvor danske iværksættere deler viden o
          ("Capino", "Platform, der forbinder virksomheder med kapital og investorer.", "https://www.capino.dk/"),
          ("Saxis", "Platform for køb og salg af virksomheder.", "https://www.saxis.dk/")]
 TIMELINE = [
-    ("Barndom", "Blåvand", "Mine forældre drev hotel, restauranter og et diskotek. Branchen kom ind under huden tidligt."),
-    ("Start", "IT og netværk", "Den tekniske verden: systemer, netværk og infrastruktur."),
-    ("Barsel", "Første virksomhed", "Jeg startede min første virksomhed, mens jeg var på barsel."),
-    ("Udlandet", "Tyskland, Thailand, Spanien", "Firmaer i tre lande – blandt andet møbelvirksomheden RD Furniture Asia."),
-    ("2020", "Førder", "Butikken i Brøddegade åbner. Det første sted i Gudhjem."),
-    ("2021", "Klippen", "Hotellet på klippen over Gudhjem havn bliver vores."),
-    ("2022", "Therns og TV", "Therns og Therns Hostel kommer til, og TV-serien Buch Thorborg følger med."),
-    ("2023", "Amino og Saxis", "Medejer af iværksætterforummet Amino og virksomhedsbørsen Saxis."),
-    ("2025", "Skt. Jørgens Gaard", "Det gamle vandrerhjem bliver en del af Klippen Hotel."),
-    ("2026", "Alt på plads", "Hotellerne er renoveret, og AI er en fast del af hverdagen."),
+    ("Barndom", "Blåvand", "Mine forældre drev hotel, restauranter og et diskotek. Branchen kom ind under huden tidligt.", ""),
+    ("Start", "IT og netværk", "Den tekniske verden: systemer, netværk og infrastruktur.", ""),
+    ("Barsel", "Første virksomhed", "Jeg startede min første virksomhed, mens jeg var på barsel.", ""),
+    ("Udlandet", "Tyskland, Thailand, Spanien", "Firmaer i tre lande – blandt andet møbelvirksomheden RD Furniture Asia.", ""),
+    ("2020", "Førder", "Butikken i Brøddegade åbner. Det første sted i Gudhjem.", "https://foerder.dk/"),
+    ("2021", "Klippen", "Hotellet på klippen over Gudhjem havn bliver vores.", "https://www.hotelklippen.com/grevens-dal-gudhjem"),
+    ("2022", "Therns og TV", "Therns og Therns Hostel kommer til, og TV-serien Buch Thorborg følger med.", "https://www.hotelklippen.com/therns-hotel-gudhjem"),
+    ("2023", "Amino og Saxis", "Medejer af iværksætterforummet Amino og virksomhedsbørsen Saxis.", "https://www.amino.dk/"),
+    ("2025", "Skt. Jørgens Gaard og Jylkat", "Det gamle vandrerhjem bliver en del af Klippen Hotel, og Jylkat bliver baren ved havnen.", "https://jylkat-bar.dk/"),
+    ("2026", "Nyt liv i husene", "Hotellerne er renoveret, og AI er blevet en fast del af hverdagen. Vi bygger stadig videre.", ""),
+    ("2027", "Fitnesscenter og restaurant", "Et nyt fitnesscenter og en ny restaurant åbner i Gudhjem.", ""),
 ]
+def tl_item(y, h, t, u):
+    hh = f'<a href="{u}">{h}</a>' if u else h
+    return f'<li><span class="yr">{y}</span><h3>{hh}</h3><p>{t}</p></li>'
+
+
 PRESS = [
     ("TV-serie", "Buch Thorborg", "Seerne fulgte os, da vi købte tre hoteller i Gudhjem og skulle nå at åbne til sæsonen.", "https://www.billedbladet.dk/kendte/danmark/tv/jannie-og-martin-buch-thorborgs-foerste-moede-saadan-havde-jesper-buch-en-finger"),
     ("Bornholms Tidende", "Arbejdsdagen starter kl. 7 og slutter kl. 22", "Om virksomheder i flere lande og et nyt erhvervseventyr i Gudhjem.", "https://tidende.dk/navne/jannie-buch-thorborgs-arbejdsdag-starter-klokken-7-og-slutter-klokken-22/124728"),
@@ -163,8 +175,7 @@ HOME = page("", "Jannie Buch Thorborg – iværksætter og hotelejer på Bornhol
  f"""<section class="hero">
 <img class="bg" src="{L(IMG + 'gudhjem-havn.jpg')}" alt="Gudhjem havn set fra luften" fetchpriority="high">
 <div class="wrap hero-in">
-<p class="coords">55°12′N 14°58′Ø · Gudhjem, Bornholm</p>
-<h1><span>Jannie</span> <span>Buch</span> <span>Thorborg</span></h1>
+<h1>Jannie Buch Thorborg</h1>
 <p class="roles">Jeg er <span class="role" data-roles="iværksætter|IT-nørd|hotelejer|AI-entusiast">iværksætter</span></p>
 <div class="btns"><a class="btn" href="{L('/mine-steder')}">Se mine steder</a><a class="btn ghost light" href="{L('/om-jannie')}">Læs om mig</a></div>
 </div>
@@ -185,7 +196,7 @@ HOME = page("", "Jannie Buch Thorborg – iværksætter og hotelejer på Bornhol
 
 <section class="road-sec"><div class="wrap">
 <h2>Fra Blåvand til Gudhjem</h2>
-<ol class="road">{''.join(f'<li><span class="yr">{y}</span><h3>{h}</h3><p>{t}</p></li>' for y, h, t in TIMELINE)}</ol>
+<ol class="road">{''.join(tl_item(y, h, t, u) for y, h, t, u in TIMELINE)}</ol>
 </div></section>
 
 <section class="ai"><div class="wrap ai-in">
@@ -209,7 +220,6 @@ HOME = page("", "Jannie Buch Thorborg – iværksætter og hotelejer på Bornhol
 OM = page("om-jannie", "Om Jannie – Jannie Buch Thorborg",
  "Om Jannie Buch Thorborg: opvokset med hotel og restauranter i Blåvand, IT og netværk, virksomheder i Tyskland, Thailand og Spanien – og i dag hoteller, bar og butik i Gudhjem.",
  f"""<section class="phead"><div class="wrap">
-<p class="coords dark">Om Jannie</p>
 <h1>Fra IT til iværksætteri</h1>
 <p class="lede">Jeg er iværksætteren, der aldrig rigtig har holdt mig til én branche. Fra netværk og systemer til møbler, markedsføring og i dag hoteldrift på Bornholm. Den røde tråd er nysgerrighed på, hvordan ting hænger sammen – og lyst til at bygge dem selv.</p>
 </div></section>
@@ -228,7 +238,7 @@ OM = page("om-jannie", "Om Jannie – Jannie Buch Thorborg",
 <section class="road-sec"><div class="wrap">
 <h2>Hverdagen på Bornholm</h2>
 <p class="lede narrow">I dag arbejder jeg med Klippen Hotel i Gudhjem, som samler tre særskilte overnatningssteder – Grevens Dal, Therns og Skt. Jørgens Gaard. Jeg står også bag baren Jylkat ved Gudhjem Havn, butikken og den fælles reception Førder og Therns Hostel.</p>
-<ol class="road five">{''.join(f'<li><span class="yr">{y}</span><h3>{h}</h3><p>{t}</p></li>' for y, h, t in TIMELINE[4:])}</ol>
+<ol class="road five">{''.join(tl_item(y, h, t, u) for y, h, t, u in TIMELINE[4:])}</ol>
 <div class="btns"><a class="btn" href="{L('/mine-steder')}">Se stederne</a></div>
 </div></section>
 {contact_band()}""")
@@ -236,7 +246,6 @@ OM = page("om-jannie", "Om Jannie – Jannie Buch Thorborg",
 STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
  "Stederne Jannie Buch Thorborg er med til at skabe på Bornholm: Klippen Hotel, baren Jylkat, butikken Førder og Therns Hostel i Gudhjem – og Amino, Capino og Saxis.",
  f"""<section class="phead"><div class="wrap">
-<p class="coords dark">Mine steder</p>
 <h1>Stederne jeg er med til at skabe</h1>
 <p class="lede">Hvert sted har sit eget udtryk og sin egen historie. Det, de har til fælles, er at jeg udvikler dem sammen med mit team.</p>
 </div></section>
@@ -258,7 +267,6 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 HIST = page("historier", "Historier – Jannie Buch Thorborg",
  "Kommende historier om iværksætteri, om stederne på Bornholm, og om hvordan Jannie bruger AI i sine egne virksomheder.",
  f"""<section class="phead"><div class="wrap">
-<p class="coords dark">Historier</p>
 <h1>Historier fra Bornholm og bagved</h1>
 <p class="lede">Om vejen fra IT til hoteldrift, om stederne i Gudhjem og om hverdagen bag dem. De første historier er på vej.</p>
 </div></section>
@@ -275,18 +283,17 @@ HIST = page("historier", "Historier – Jannie Buch Thorborg",
 KONTAKT = page("kontakt", "Kontakt – Jannie Buch Thorborg",
  "Kontakt Jannie Buch Thorborg om samarbejde, presse eller hendes virksomheder på jannie@hotelklippen.dk.",
  f"""<section class="phead"><div class="wrap">
-<p class="coords dark">Kontakt</p>
-<h1>Skriv til mig</h1>
-<p class="lede">Ved konkrete henvendelser om samarbejde, presse eller mine virksomheder kan du skrive til mig på mail.</p>
-<p class="mailbig"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+<h1>Kontakt</h1>
+<p class="lede">Har du en henvendelse om samarbejde, presse eller en af mine virksomheder, så skriv til mig på mail.</p>
+<div class="btns"><a class="btn" href="mailto:{EMAIL}">Skriv til {EMAIL}</a></div>
 </div></section>
-<section><div class="wrap split top">
-<div><h2>Hotelophold og bordbestilling</h2><p>Spørgsmål om ophold og reservationer klares af <a href="https://www.hotelklippen.com">Klippen Hotel</a> på info@hotelklippen.dk.</p></div>
-<div><h2>Følg med</h2><div class="some big">{''.join(f'<a href="{u}" rel="me noopener">{n}</a>' for n, u in SOME)}</div></div>
+<section><div class="wrap kgrid">
+<div class="kbox"><h2>Hotelophold og bordbestilling</h2><p>Spørgsmål om ophold og bordbestilling klarer teamet på Klippen Hotel.</p><p><a href="https://www.hotelklippen.com">hotelklippen.com</a><br><a href="mailto:info@hotelklippen.dk">info@hotelklippen.dk</a></p></div>
+<div class="kbox"><h2>Følg med</h2><ul class="slist">{''.join(f'<li><a href="{u}" rel="me noopener">{n}</a></li>' for n, u in SOME)}</ul></div>
 </div></section>""")
 
 NOTFOUND = page("404", "Siden findes ikke – Jannie Buch Thorborg", "Siden findes ikke.",
- f"""<section class="phead"><div class="wrap"><p class="coords dark">404</p><h1>Siden findes ikke</h1>
+ f"""<section class="phead"><div class="wrap"><h1>Siden findes ikke</h1>
 <p class="lede">Linket virker ikke længere, eller adressen er skrevet forkert.</p>
 <div class="btns"><a class="btn" href="{L('/')}">Gå til forsiden</a></div></div></section>""")
 

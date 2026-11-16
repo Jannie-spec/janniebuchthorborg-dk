@@ -196,3 +196,35 @@ footer .some a:hover{background:#fff;color:var(--granit)}
   .soon li{grid-template-columns:1fr;gap:4px}
   .top .wrap{flex-direction:column;align-items:flex-start;gap:6px;padding-top:10px;padding-bottom:10px}
 }
+
+/* v4: roligere typografi – kun Source Sans, ingen kursiv eller understregede ord */
+:root{--serif:"Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-weight:700;letter-spacing:0;line-height:1.15}
+h2{font-size:clamp(1.8rem,3vw,2.5rem)}
+h3{font-size:1.3rem}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.01em;max-width:none}
+.hero h1 span{animation:none}
+.roles{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:400}
+.role{font-style:normal;font-weight:700;border-bottom:0}
+.big{font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.4;letter-spacing:0}
+.lede{font-size:clamp(1.1rem,1.6vw,1.3rem)}
+.yr{font-size:1.35rem;letter-spacing:0}
+.road h3 a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rust)}
+.road h3 a:hover{color:var(--rust)}
+.quote blockquote p{font-weight:600;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.25;letter-spacing:0;max-width:28ch}
+.place .ph.type{font-size:1.6rem}
+.fname{font-size:1.3rem}
+.phead h1{font-size:clamp(2.4rem,5vw,3.6rem)}
+.kgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.kbox{background:var(--sten);border-radius:20px;padding:32px}
+.kbox h2{font-size:1.4rem;margin-bottom:10px}
+.kbox p{color:var(--soft)}
+.kbox a{color:var(--groen);font-weight:600}
+.slist{list-style:none;padding:0;margin:0}
+.slist li{padding:6px 0}
+.slist a{text-decoration:none}
+.kbox .slist a:hover{text-decoration:underline}
+footer .slist li{padding:3px 0}
+footer .slist a{color:#fff}
+footer .slist a:hover{text-decoration:underline}
+@media (max-width:700px){.kgrid{grid-template-columns:1fr}}
