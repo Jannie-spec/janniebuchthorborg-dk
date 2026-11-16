@@ -14,7 +14,7 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else ""
 DIST = ROOT / ("dist" if not BASE else "dist" + BASE.replace("/", "-"))
 DOMAIN = "https://janniebuchthorborg.dk"
 CF_TOKEN = "88172b9894d4401780304b7d6843ed58"   # Cloudflare Web Analytics (cookiefri)
-VER = "4"
+VER = "5"
 EMAIL = "jannie@hotelklippen.dk"
 SOME = [("Instagram", "https://www.instagram.com/janniebuch"), ("TikTok", "https://www.tiktok.com/@janniebuch"),
         ("Facebook", "https://www.facebook.com/jannie.buch.1/"), ("LinkedIn", "https://www.linkedin.com/in/jannie-buch/"),
