@@ -57,8 +57,8 @@ def page(slug, title, desc, body, dark_top=False):
 <meta property="og:type" content="profile"><meta property="og:site_name" content="Jannie Buch Thorborg">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{canon}">
 <meta property="og:image" content="{DOMAIN}{IMG}gudhjem-havn.jpg"><meta property="og:locale" content="da_DK">
-<meta name="theme-color" content="#14181b">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314181b'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='28' fill='%23e0663f' text-anchor='middle'%3EJB%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#22392c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322392c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='28' fill='%23e6dccb' text-anchor='middle'%3EJB%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="{L('/assets/fonts/source-serif.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{L('/assets/site.css')}?v={VER}">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
@@ -191,11 +191,15 @@ HOME = page("", "Jannie Buch Thorborg – iværksætter og hotelejer på Bornhol
 <ul class="ai-list">{''.join(f'<li><span class="chk" aria-hidden="true"></span><div><h3>{h}</h3><p>{t}</p></div></li>' for h, t in AI)}</ul>
 </div></section>
 
+<section class="biz"><div class="wrap">
+<div class="head"><h2>Også medejer af</h2><a class="more" href="{L('/mine-steder')}">Alle mine virksomheder</a></div>
+<div class="trio">{''.join(f'<a href="{u}" rel="noopener"><h3>{n} ↗</h3><p>{d}</p></a>' for n, d, u in OTHER)}</div>
+</div></section>
+
 <section class="quote"><div class="wrap">
 <blockquote><p>”Det, jeg godt kan lide, er friheden, og at jeg kan styre det hele selv.”</p><cite>Jannie Buch Thorborg til Bornholms Tidende</cite></blockquote>
 </div></section>
 
-{press_block()}
 
 {contact_band()}""", dark_top=True)
 
@@ -224,7 +228,6 @@ OM = page("om-jannie", "Om Jannie – Jannie Buch Thorborg",
 <ol class="road five">{''.join(f'<li><span class="yr">{y}</span><h3>{h}</h3><p>{t}</p></li>' for y, h, t in TIMELINE[4:])}</ol>
 <div class="btns"><a class="btn" href="{L('/mine-steder')}">Se stederne</a></div>
 </div></section>
-{press_block()}
 {contact_band()}""")
 
 STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
