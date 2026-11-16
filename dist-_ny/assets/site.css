@@ -101,7 +101,7 @@ section{padding:clamp(64px,8vw,120px) 0}
 .road p{color:var(--soft);font-size:1rem}
 
 .lede+.road{margin-top:48px}
-.road.five{grid-template-columns:repeat(5,1fr)}
+.road.five{grid-template-columns:repeat(4,1fr)}
 @media (max-width:1000px){.road.five{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.road.five{grid-template-columns:1fr}}
 /* AI */
@@ -134,7 +134,7 @@ section{padding:clamp(64px,8vw,120px) 0}
 .press .go{margin-top:auto;padding-top:14px;font-weight:700;font-size:.95rem}
 @media (max-width:1000px){.press-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.press-grid{grid-template-columns:1fr}}
-.road{grid-template-columns:repeat(5,1fr)}
+.road{grid-template-columns:repeat(4,1fr)}
 .biz .trio a{background:var(--sten)}
 .quote{background:var(--granit);color:var(--glod)}
 .quote cite{color:#fff!important;opacity:.8}
