@@ -18,7 +18,7 @@ VER = "2"
 EMAIL = "jannie@hotelklippen.dk"
 SOME = [("Instagram", "https://www.instagram.com/janniebuch"), ("TikTok", "https://www.tiktok.com/@janniebuch"),
         ("Facebook", "https://www.facebook.com/jannie.buch.1/"), ("LinkedIn", "https://www.linkedin.com/in/jannie-buch/"),
-        ("YouTube", "https://www.youtube.com/channel/UCEDfdpfjWoxPIUrtXDjT_kg")]
+        ("X", "https://x.com/janniebuchace"), ("YouTube", "https://www.youtube.com/channel/UCEDfdpfjWoxPIUrtXDjT_kg")]
 NAV = [("om-jannie", "Om Jannie"), ("mine-steder", "Mine steder"), ("historier", "Historier"), ("kontakt", "Kontakt")]
 IMG = "/assets/img/"
 
@@ -102,9 +102,9 @@ PLACES = [
     dict(n="Therns Hostel", k="Vandrerhjemmet", img="", alt="",
          d="Vandrerhjemmet i Gudhjem – et enkelt sted at sove tæt på havnen og klipperne.",
          b="Besøg Therns Hostel", u="https://www.therns.dk/"),
-    dict(n="Det Gamle Bryggeri", k="Sommerhuset", img="", alt="",
-         d="Vores store røde sommerhus i Bryggerstræde – det gamle bryggeri midt i Gudhjem. Det kan lejes til ferie med familie og venner.",
-         b="Spørg om leje", u="mailto:jannie@hotelklippen.dk?subject=Leje%20af%20Det%20Gamle%20Bryggeri"),
+    dict(n="Det Gamle Bryggeri", k="Sommerhuset", img="https://a0.muscache.com/im/pictures/dd9570e8-12f6-4079-a922-c1681b27099a.jpg?im_w=1200", alt="Det Gamle Bryggeri i Bryggerstræde, Gudhjem",
+         d="Vores store røde sommerhus i Bryggerstræde – det gamle bryggeri midt i Gudhjem med havudsigt og egen klippe. Plads til 14, så hele familien eller vennerne kan være med.",
+         b="Se huset på Airbnb", u="https://www.airbnb.dk/rooms/28063316"),
 ]
 OTHER = [("Amino", "Iværksætterforum, hvor danske iværksættere deler viden og sparrer med hinanden.", "https://www.amino.dk/"),
          ("Capino", "Platform, der forbinder virksomheder med kapital og investorer.", "https://www.capino.dk/"),
