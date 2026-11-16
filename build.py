@@ -22,6 +22,9 @@ NAV = [("om-jannie", "Om Jannie"), ("mine-steder", "Mine steder"), ("historier",
 
 
 def L(path):
+    # testudgaven (/_ny) ligger bag Aidas gamle .htaccess, så her bruges .html-adresser
+    if BASE and path not in ("/", "") and "." not in path.rsplit("/", 1)[-1]:
+        return BASE + path + ".html"
     return BASE + path
 
 
