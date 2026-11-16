@@ -116,6 +116,21 @@ section{padding:clamp(64px,8vw,120px) 0}
 .trio.on-dark a{background:var(--granit2)}
 .trio.on-dark p{color:rgba(255,255,255,.75)}
 
+/* citat + presse */
+.quote{padding:clamp(56px,7vw,100px) 0}
+.quote blockquote p{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.4vw,3.6rem);line-height:1.12;letter-spacing:-.02em;max-width:18ch}
+.quote cite{display:block;margin-top:18px;font-style:normal;color:var(--rust);font-weight:600}
+.press-sec{background:var(--sten)}
+.press-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.press{display:flex;flex-direction:column;background:#fff;border-radius:20px;padding:26px;text-decoration:none;transition:transform .2s}
+.press:hover{transform:translateY(-3px)}
+.press .k{color:var(--rust);font-weight:600;font-size:.92rem;margin-bottom:8px}
+.press h3{font-size:1.3rem}
+.press p{color:var(--soft);font-size:.98rem}
+.press .go{margin-top:auto;padding-top:14px;font-weight:700;font-size:.95rem}
+@media (max-width:1000px){.press-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.press-grid{grid-template-columns:1fr}}
+.road{grid-template-columns:repeat(5,1fr)}
 /* kontaktbånd */
 .band{background:var(--glod);color:var(--granit)}
 .band-in{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
