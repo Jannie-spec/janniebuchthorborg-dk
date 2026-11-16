@@ -1,0 +1,48 @@
+# janniebuchthorborg.dk – statisk side (erstatter Aida)
+Options -Indexes -MultiViews
+DirectorySlash Off
+ErrorDocument 404 /404.html
+
+RewriteEngine on
+
+# www -> uden www, http -> https
+RewriteCond %{HTTP_HOST} ^www\.janniebuchthorborg\.dk$ [NC]
+RewriteRule ^(.*)$ https://janniebuchthorborg.dk/$1 [R=301,L]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Backup af den gamle side er ikke offentlig
+RewriteRule ^_aida-backup(/|$) - [F,L]
+
+# Gamle Aida-adresser
+RewriteRule ^__wsb/ - [G,L]
+RewriteRule ^(cookiepolitik|privatlivspolitik)/?$ https://janniebuchthorborg.dk/ [R=301,L]
+
+# Adresser med .html eller skråstreg til sidst -> den rene adresse
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?]
+RewriteRule ^ / [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.*)/index$ /$1 [R=301,L]
+
+# /om-jannie -> om-jannie.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ /$1.html [L]
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(woff2|css|js|jpe?g|png|webp)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml
+</IfModule>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_ny/
+Disallow: /_aida-backup/
+
+Sitemap: https://janniebuchthorborg.dk/sitemap.xml
