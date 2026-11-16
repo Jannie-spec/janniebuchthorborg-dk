@@ -102,6 +102,9 @@ PLACES = [
     dict(n="Therns Hostel", k="Vandrerhjemmet", img="", alt="",
          d="Vandrerhjemmet i Gudhjem – et enkelt sted at sove tæt på havnen og klipperne.",
          b="Besøg Therns Hostel", u="https://www.therns.dk/"),
+    dict(n="Det Gamle Bryggeri", k="Sommerhuset", img="", alt="",
+         d="Vores store røde sommerhus i Bryggerstræde – det gamle bryggeri midt i Gudhjem. Det kan lejes til ferie med familie og venner.",
+         b="Spørg om leje", u="mailto:jannie@hotelklippen.dk?subject=Leje%20af%20Det%20Gamle%20Bryggeri"),
 ]
 OTHER = [("Amino", "Iværksætterforum, hvor danske iværksættere deler viden og sparrer med hinanden.", "https://www.amino.dk/"),
          ("Capino", "Platform, der forbinder virksomheder med kapital og investorer.", "https://www.capino.dk/"),
@@ -134,7 +137,7 @@ def place_cards(items):
     out = []
     for p in items:
         ph = (f'<div class="ph"><img src="{p["img"] if p["img"].startswith("http") else L(p["img"])}" alt="{e(p["alt"])}" loading="lazy"></div>'
-              if p["img"] else '<div class="ph type"><span>Therns<br>Hostel</span></div>')
+              if p["img"] else f'<div class="ph type"><span>{p["n"].replace(" ", "<br>", 1)}</span></div>')
         out.append(f'<a class="place" href="{p["u"]}">{ph}<div class="tx"><p class="k">{p["k"]}</p><h3>{p["n"]}</h3><p>{p["d"]}</p><span class="go">{p["b"]}</span></div></a>')
     return "".join(out)
 

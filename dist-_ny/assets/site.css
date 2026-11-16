@@ -91,6 +91,8 @@ section{padding:clamp(64px,8vw,120px) 0}
 .place .go::after{content:"";display:inline-block;width:18px;height:2px;background:var(--rust);vertical-align:middle;margin-left:10px;transition:width .2s}
 .place:hover .go::after{width:30px}
 
+.places .place:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:1fr 2.2fr}
+@media (max-width:1000px){.places .place:last-child:nth-child(odd){grid-template-columns:1fr 1.1fr}}
 /* tidslinje */
 .road{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);margin-top:10px}
 .road li{position:relative;padding:28px 22px 28px 0;border-bottom:1px solid var(--line)}
