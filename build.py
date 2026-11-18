@@ -268,7 +268,7 @@ POSTS = [
     dict(slug="ai-laeser-vores-anmeldelser", dato="18. november 2026", iso="2026-11-18",
          titel="AI læser alle vores anmeldelser – hver eneste dag",
          intro="Vi får anmeldelser på Google, Booking.com, Tripadvisor og mange andre steder. Jeg har bygget et dashboard med AI, der holder styr på dem alle.",
-         tekst="""<p>Når man har tre hoteller, en bar og en butik, får man mange anmeldelser. På Google, Booking.com, Tripadvisor og flere til. Det er svært at holde øje med det hele, når man også skal passe gæsterne.</p>
+         tekst="""<p>Når man har tre hoteller under <a href="https://www.hotelklippen.com">Klippen Hotel</a>, baren <a href="https://jylkat-bar.dk/">Jylkat</a> og butikken <a href="https://foerder.dk/">Førder</a>, får man mange anmeldelser. På Google, Booking.com, Tripadvisor og flere til. Det er svært at holde øje med det hele, når man også skal passe gæsterne.</p>
 <p>Så jeg byggede et dashboard med AI. Vi kalder det Gæsternes stemme.</p>
 <h2>Det sker hver dag</h2>
 <p>Hver dag henter AI de nye anmeldelser fra alle platformene og samler dem ét sted. Her kan vi se, hvordan det går for hvert sted, og hvordan det har udviklet sig over tid.</p>
@@ -280,7 +280,7 @@ POSTS = [
 <h2>Hvorfor det betyder noget</h2>
 <p>Anmeldelser er det første, mange gæster læser, før de booker. Når hver eneste anmeldelse bliver set og får et svar, kan gæsterne mærke, at vi lytter.</p>
 <p>Og mine medarbejdere kan bruge deres tid på gæsterne i stedet for at hoppe rundt mellem en masse forskellige sider.</p>
-<p>Vil du høre mere om, hvordan jeg gjorde, så skriv endelig til mig.</p>"""),
+<p>Du kan se alle mine steder <a href="/mine-steder">her</a>. Vil du høre mere om, hvordan jeg gjorde, så skriv endelig til mig.</p>"""),
     dict(slug="eget-gavekortsystem", dato="16. november 2026", iso="2026-11-16",
          titel="Jeg har bygget mit eget gavekortsystem – og det gør lidt ondt",
          intro="Jeg har solgt vores gavekort gennem Life Peaks og været rigtig glad for det. Nu har jeg bygget mit eget på en dag med AI.",
