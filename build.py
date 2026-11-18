@@ -265,6 +265,22 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 {contact_band()}""")
 
 POSTS = [
+    dict(slug="ai-laeser-vores-anmeldelser", dato="18. november 2026", iso="2026-11-18",
+         titel="AI læser alle vores anmeldelser – hver eneste dag",
+         intro="Vi får anmeldelser på Google, Booking.com, Tripadvisor og mange andre steder. Jeg har bygget et dashboard med AI, der holder styr på dem alle.",
+         tekst="""<p>Når man har tre hoteller, en bar og en butik, får man mange anmeldelser. På Google, Booking.com, Tripadvisor og flere til. Det er svært at holde øje med det hele, når man også skal passe gæsterne.</p>
+<p>Så jeg byggede et dashboard med AI. Vi kalder det Gæsternes stemme.</p>
+<h2>Det sker hver dag</h2>
+<p>Hver dag henter AI de nye anmeldelser fra alle platformene og samler dem ét sted. Her kan vi se, hvordan det går for hvert sted, og hvordan det har udviklet sig over tid.</p>
+<p>De gode anmeldelser uden kritik svarer AI selv på. Personligt, kort og forskelligt hver gang, så det lyder som os og ikke som en maskine.</p>
+<p>Anmeldelser med kritik svarer AI ikke på. Dem tager vi selv, for der skal et menneske til. Men vi kan skrive svaret i dashboardet, og når en leder har godkendt det, bliver det lagt ud på platformen.</p>
+<h2>De dårlige anmeldelser</h2>
+<p>Hver dårlig anmeldelse bliver tjekket op mod platformens egne regler. Hvis den bryder reglerne, bliver den indberettet til platformen, og jeg får besked.</p>
+<p>Det er ikke for at slippe for kritik. Den lærer vi af. Men en anmeldelse, der ikke burde være der, skal heller ikke trække ned.</p>
+<h2>Hvorfor det betyder noget</h2>
+<p>Anmeldelser er det første, mange gæster læser, før de booker. Når hver eneste anmeldelse bliver set og får et svar, kan gæsterne mærke, at vi lytter.</p>
+<p>Og mine medarbejdere kan bruge deres tid på gæsterne i stedet for at hoppe rundt mellem en masse forskellige sider.</p>
+<p>Vil du høre mere om, hvordan jeg gjorde, så skriv endelig til mig.</p>"""),
     dict(slug="eget-gavekortsystem", dato="16. november 2026", iso="2026-11-16",
          titel="Jeg har bygget mit eget gavekortsystem – og det gør lidt ondt",
          intro="Jeg har solgt vores gavekort gennem Life Peaks og været rigtig glad for det. Nu har jeg bygget mit eget på en dag med AI.",

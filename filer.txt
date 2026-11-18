@@ -8,6 +8,7 @@ assets/img/klippen-terrasse.jpg
 assets/img/solnedgang.jpg
 assets/site.css
 historier.html
+historier/ai-laeser-vores-anmeldelser.html
 historier/eget-gavekortsystem.html
 index.html
 kontakt.html
