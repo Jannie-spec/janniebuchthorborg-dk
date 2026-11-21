@@ -41,7 +41,7 @@ def page(slug, title, desc, body, dark_top=False):
           "worksFor": [{"@type": "Hotel", "name": "Klippen Hotel", "url": "https://www.hotelklippen.com"},
                        {"@type": "BarOrPub", "name": "Jylkat", "url": "https://jylkat-bar.dk"},
                        {"@type": "Store", "name": "Førder", "url": "https://foerder.dk"},
-                       {"@type": "Hostel", "name": "Therns Hostel", "url": "https://www.therns.dk"}],
+                       {"@type": "Hostel", "name": "Therns Hostel", "url": "https://therns.dk"}],
           "sameAs": [u for _, u in SOME]}
     robots = '<meta name="robots" content="noindex">\n' if BASE or slug == "404" else ""
     some = "".join(f'<li><a href="{u}" rel="me noopener">{n}</a></li>' for n, u in SOME)
@@ -106,7 +106,7 @@ PLACES = [
          b="Besøg Førder", u="https://foerder.dk/"),
     dict(n="Therns Hostel", k="Vandrerhjemmet", img="https://therns.dk/wp-content/uploads/2022/08/overnatning-bornholm-hotel-nordlandet.webp", alt="Therns i Gudhjem",
          d="Vandrerhjemmet i Gudhjem – et enkelt sted at sove tæt på havnen og klipperne.",
-         b="Besøg Therns Hostel", u="https://www.therns.dk/"),
+         b="Besøg Therns Hostel", u="https://therns.dk/"),
     dict(n="Det Gamle Bryggeri", k="Sommerhuset", img="https://a0.muscache.com/im/pictures/dd9570e8-12f6-4079-a922-c1681b27099a.jpg?im_w=1200", alt="Det Gamle Bryggeri i Bryggerstræde, Gudhjem",
          d="Vores store røde sommerhus i Bryggerstræde – det gamle bryggeri midt i Gudhjem med havudsigt og egen klippe. Plads til 14, så hele familien eller vennerne kan være med.",
          b="Se huset på Airbnb", u="https://www.airbnb.dk/rooms/28063316"),
