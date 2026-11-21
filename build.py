@@ -124,6 +124,7 @@ TIMELINE = [
     ("2022", "Therns og TV", "Therns og Therns Hostel kommer til, og TV-serien Buch Thorborg følger med.", "https://www.hotelklippen.com/therns-hotel-gudhjem"),
     ("2023", "Amino og Saxis", "Medejer af iværksætterforummet Amino og virksomhedsbørsen Saxis.", "https://www.amino.dk/"),
     ("2025", "Skt. Jørgens Gaard og Jylkat", "Det gamle vandrerhjem bliver en del af Klippen Hotel, og Jylkat bliver baren ved havnen.", "https://jylkat-bar.dk/"),
+    ("2026", "Founderbasen", "Sammen med Martin lancerer vi Founderbasen, en gratis service, hvor iværksættere finder en medstifter eller kompagnon.", "https://founderbasen.dk/"),
     ("2026", "Nyt liv i husene", "Hotellerne er renoveret, og AI er blevet en fast del af hverdagen. Vi bygger stadig videre.", ""),
     ("2027", "Fitnesscenter og restaurant", "Et nyt fitnesscenter og en ny restaurant åbner i Gudhjem.", ""),
 ]
@@ -266,6 +267,20 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 {contact_band()}""")
 
 POSTS = [
+    dict(slug="founderbasen", dato="21. november 2026", iso="2026-11-21",
+         titel="Founderbasen: hvor iværksættere finder deres forretningspartner",
+         intro="Mange gode idéer bliver aldrig til noget, fordi den, der har idéen, står alene. Derfor har Martin og jeg lavet Founderbasen.",
+         tekst="""<p>Jeg har aldrig bygget noget alene. Hotellerne i Gudhjem, baren, butikken – det hele er lavet sammen med andre, og først og fremmest sammen med Martin. Vi er gode til hver vores ting, og det er netop derfor, det virker.</p>
+<p>Men det er svært at finde den rigtige at starte op med. Mange har en god idé, men ingen til at bygge den. Andre har en virksomhed, men står med det hele selv. Derfor har vi lavet <a href="https://founderbasen.dk/">Founderbasen</a>.</p>
+<h2>Sådan virker det</h2>
+<p>Founderbasen er gratis. Man opretter en profil på et par minutter og fortæller, hvad man er god til, og hvad man mangler. Har man en idé, kan man finde en <a href="https://founderbasen.dk/medstifter/">medstifter</a>. Har man en virksomhed, kan man finde en <a href="https://founderbasen.dk/kompagnon/">kompagnon</a>. Og vil man gerne være med på andres idé, kan man også det.</p>
+<p>Founderbasen foreslår folk, der kan det, man selv mangler, og sender en mail, når der er et godt match. Man får først hinandens kontaktoplysninger, når begge har sagt ja, og man kan være anonym, hvis man ikke vil vise, at man søger.</p>
+<h2>Vælg ikke en kopi af dig selv</h2>
+<p>Det vigtigste råd, jeg kan give, er at lede efter en, der er anderledes end dig. To, der er gode til det samme, har ofte også de samme blinde vinkler. Er du god til at bygge, så find en, der kan sælge. Er du god til at sælge, så find en, der kan bygge.</p>
+<p>Og tal om de svære ting fra starten: tid, ejerskab, penge og hvad der sker, hvis en af jer vil ud. På Founderbasen ligger der <a href="https://founderbasen.dk/guide/">guides</a> om netop det.</p>
+<h2>AI hjælper med at blive fundet</h2>
+<p>Ligesom med hotellerne bruger jeg AI til at gøre Founderbasen synlig: guides, søgeord og sider, der gør det lettere for både Google og AI-tjenester som ChatGPT at forstå, hvad siden kan.</p>
+<p>Leder du selv efter en forretningspartner, så <a href="https://founderbasen.dk/opret/">opret en gratis profil</a>. Og kender du en, der går rundt med en god idé, så send dem gerne videre.</p>"""),
     dict(slug="ai-laeser-vores-anmeldelser", dato="18. november 2026", iso="2026-11-18",
          titel="AI læser alle vores anmeldelser – hver eneste dag",
          intro="Vi får anmeldelser på Google, Booking.com, Tripadvisor og mange andre steder. Jeg har bygget et dashboard med AI, der holder styr på dem alle.",

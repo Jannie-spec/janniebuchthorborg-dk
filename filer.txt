@@ -10,6 +10,7 @@ assets/site.css
 historier.html
 historier/ai-laeser-vores-anmeldelser.html
 historier/eget-gavekortsystem.html
+historier/founderbasen.html
 index.html
 kontakt.html
 mine-steder.html
