@@ -261,6 +261,7 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 <h2>Uden for Bornholm</h2>
 <p class="lede narrow">Jeg er også medejer af tre virksomheder, der handler om iværksættere, kapital og handel med virksomheder.</p>
 <div class="trio on-dark">{''.join(f'<a href="{u}" rel="noopener"><h3>{n} ↗</h3><p>{d}</p></a>' for n, d, u in OTHER)}</div>
+<p class="lede narrow" style="margin-top:28px">Sammen med Martin står jeg desuden bag <a href="https://founderbasen.dk/">Founderbasen</a>, en gratis service, hvor iværksættere finder en medstifter, og virksomhedsejere finder en kompagnon.</p>
 </div></section>
 {contact_band()}""")
 
