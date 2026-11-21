@@ -117,6 +117,7 @@ section{padding:clamp(64px,8vw,120px) 0}
 .trio a{display:block;text-decoration:none;padding:28px;border-radius:20px;background:var(--sten);transition:transform .2s}
 .trio a:hover{transform:translateY(-3px)}
 .trio p{color:var(--soft);font-size:1rem}
+.trio.fire{grid-template-columns:repeat(4,1fr)}
 .trio.on-dark a{background:var(--granit2)}
 .trio.on-dark p{color:rgba(255,255,255,.75)}
 
@@ -179,9 +180,10 @@ footer .some a:hover{background:#fff;color:var(--granit)}
   .places{grid-template-columns:1fr}
   .road{grid-template-columns:1fr 1fr}
 }
+@media (max-width:1100px){.trio.fire{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:820px){
   body{font-size:17px}
-  .intro-in,.ai-in,.band-in,.split,footer .wrap,.trio{grid-template-columns:1fr}
+  .intro-in,.ai-in,.band-in,.split,footer .wrap,.trio,.trio.fire{grid-template-columns:1fr}
   .photo{position:static}
   .photo img{aspect-ratio:4/3}
   .top .wrap{min-height:64px}

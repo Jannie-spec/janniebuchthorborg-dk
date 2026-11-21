@@ -14,7 +14,7 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else ""
 DIST = ROOT / ("dist" if not BASE else "dist" + BASE.replace("/", "-"))
 DOMAIN = "https://janniebuchthorborg.dk"
 CF_TOKEN = "88172b9894d4401780304b7d6843ed58"   # Cloudflare Web Analytics (cookiefri)
-VER = "6"
+VER = "7"
 EMAIL = "jannie@hotelklippen.dk"
 SOME = [("Instagram", "https://www.instagram.com/janniebuch"), ("TikTok", "https://www.tiktok.com/@janniebuch"),
         ("Facebook", "https://www.facebook.com/jannie.buch.1/"), ("LinkedIn", "https://www.linkedin.com/in/jannie-buch/"),
@@ -113,7 +113,8 @@ PLACES = [
 ]
 OTHER = [("Amino", "Iværksætterforum, hvor danske iværksættere deler viden og sparrer med hinanden.", "https://www.amino.dk/"),
          ("Capino", "Platform, der forbinder virksomheder med kapital og investorer.", "https://www.capino.dk/"),
-         ("Saxis", "Platform for køb og salg af virksomheder.", "https://www.saxis.dk/")]
+         ("Saxis", "Platform for køb og salg af virksomheder.", "https://www.saxis.dk/"),
+         ("Founderbasen", "Gratis service, hvor iværksættere finder en medstifter eller kompagnon.", "https://founderbasen.dk/")]
 TIMELINE = [
     ("Barndom", "Blåvand", "Mine forældre drev hotel, restauranter og et diskotek. Branchen kom ind under huden tidligt.", ""),
     ("Start", "IT og netværk", "Den tekniske verden: systemer, netværk og infrastruktur.", ""),
@@ -208,7 +209,7 @@ HOME = page("", "Jannie Buch Thorborg – iværksætter og hotelejer på Bornhol
 
 <section class="biz"><div class="wrap">
 <div class="head"><h2>Også medejer af</h2><a class="more" href="{L('/mine-steder')}">Alle mine virksomheder</a></div>
-<div class="trio">{''.join(f'<a href="{u}" rel="noopener"><h3>{n} ↗</h3><p>{d}</p></a>' for n, d, u in OTHER)}</div>
+<div class="trio fire">{''.join(f'<a href="{u}" rel="noopener"><h3>{n} ↗</h3><p>{d}</p></a>' for n, d, u in OTHER)}</div>
 </div></section>
 
 <section class="quote"><div class="wrap">
@@ -260,9 +261,8 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 </div></div></section>
 <section class="ai"><div class="wrap">
 <h2>Uden for Bornholm</h2>
-<p class="lede narrow">Jeg er også medejer af tre virksomheder, der handler om iværksættere, kapital og handel med virksomheder.</p>
-<div class="trio on-dark">{''.join(f'<a href="{u}" rel="noopener"><h3>{n} ↗</h3><p>{d}</p></a>' for n, d, u in OTHER)}</div>
-<p class="lede narrow" style="margin-top:28px">Sammen med Martin står jeg desuden bag <a href="https://founderbasen.dk/">Founderbasen</a>, en gratis service, hvor iværksættere finder en medstifter, og virksomhedsejere finder en kompagnon.</p>
+<p class="lede narrow">Jeg står også bag fire virksomheder, der handler om iværksættere, partnere, kapital og handel med virksomheder.</p>
+<div class="trio fire on-dark">{''.join(f'<a href="{u}" rel="noopener"><h3>{n} ↗</h3><p>{d}</p></a>' for n, d, u in OTHER)}</div>
 </div></section>
 {contact_band()}""")
 
