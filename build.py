@@ -104,7 +104,7 @@ PLACES = [
     dict(n="Førder", k="Butik og reception", img="https://foerder.dk/onewebmedia/Udefra.jpg", alt="Førder i Brøddegade 28, Gudhjem",
          d="Butik med bornholmske varer i et gammelt bindingsværkshus – og fælles reception for alle stederne.",
          b="Besøg Førder", u="https://foerder.dk/"),
-    dict(n="Therns Hostel", k="Vandrerhjemmet", img="https://therns.dk/wp-content/uploads/2022/08/overnatning-bornholm-hotel-nordlandet.webp", alt="Therns i Gudhjem",
+    dict(n="Therns Hostel", k="Vandrerhjemmet", img="https://therns.dk/wp-content/uploads/2026/11/hostel-gudhjem-gaardhave-natur.webp", alt="Gårdhaven på Therns Hostel i Gudhjem",
          d="Vandrerhjemmet i Gudhjem – et enkelt sted at sove tæt på havnen og klipperne.",
          b="Besøg Therns Hostel", u="https://therns.dk/"),
     dict(n="Det Gamle Bryggeri", k="Sommerhuset", img="https://a0.muscache.com/im/pictures/dd9570e8-12f6-4079-a922-c1681b27099a.jpg?im_w=1200", alt="Det Gamle Bryggeri i Bryggerstræde, Gudhjem",
