@@ -123,7 +123,7 @@ TIMELINE = [
     ("2020", "Førder", "Butikken i Brøddegade åbner. Det første sted i Gudhjem.", "https://foerder.dk/"),
     ("2021", "Klippen", "Hotellet på klippen over Gudhjem havn bliver vores.", "https://www.hotelklippen.com/grevens-dal-gudhjem"),
     ("2022", "Therns og TV", "Therns og Therns Hostel kommer til, og TV-serien Buch Thorborg følger med.", "https://www.hotelklippen.com/therns-hotel-gudhjem"),
-    ("2023", "Amino og Saxis", "Medejer af iværksætterforummet Amino og virksomhedsbørsen Saxis.", "https://www.amino.dk/"),
+    ("2023", "Amino, Capino og Saxis", "Medejer af iværksætterforummet Amino, kapitalplatformen Capino og virksomhedsbørsen Saxis.", "https://www.amino.dk/"),
     ("2025", "Skt. Jørgens Gaard og Jylkat", "Det gamle vandrerhjem bliver en del af Klippen Hotel, og Jylkat bliver baren ved havnen.", "https://jylkat-bar.dk/"),
     ("2026", "Founderbasen", "Sammen med Martin lancerer vi Founderbasen, en gratis service, hvor iværksættere finder en medstifter eller kompagnon.", "https://founderbasen.dk/"),
     ("2026", "Nyt liv i husene", "Hotellerne er renoveret, og AI er blevet en fast del af hverdagen. Vi bygger stadig videre.", ""),
