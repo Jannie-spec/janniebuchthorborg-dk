@@ -11,6 +11,7 @@ historier.html
 historier/ai-laeser-vores-anmeldelser.html
 historier/eget-gavekortsystem.html
 historier/founderbasen.html
+historier/julekalender.html
 index.html
 kontakt.html
 mine-steder.html

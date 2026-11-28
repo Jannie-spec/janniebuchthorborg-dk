@@ -267,6 +267,23 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 {contact_band()}""")
 
 POSTS = [
+    dict(slug="julekalender", dato="28. november 2026", iso="2026-11-28",
+         titel="Vi har tegnet Gudhjem som en gammeldags julekalender",
+         intro="I år har Klippen Hotel en julekalender på nettet med 24 låger, 24 små historier fra Gudhjem og en præmie hver dag. Jeg har bygget den med AI.",
+         tekst="""<p>Jeg ville gerne lave en julekalender, der ligner de gamle danske papkalendere med nisser, juletræer og julemænd. Ikke noget, der ligner AI. Noget, man får lyst til at åbne hver morgen.</p>
+<p>Så det har jeg lavet til <a href="https://www.hotelklippen.com">Klippen Hotel</a>.</p>
+<h2>Hele Gudhjem bag lågerne</h2>
+<p>Kalenderen er en tegning af det rigtige Gudhjem med vores egne huse: hotellerne, baren <a href="https://jylkat-bar.dk/">Jylkat</a> ved havnen og butikken <a href="https://foerder.dk/">Førder</a> i Brøddegade. Der er julemusik, og lågerne åbner med en lille animation.</p>
+<p>Bag hver låge er der en lille historie om nogen fra Gudhjem. Thomas skænker gløgg, Henrik står på en stige, Maiken sælger julesnaps i Førder, og Martin råber glædelig jul. Mit pindsvin Pind er også med. Det er ham, Jylkat er opkaldt efter. Og så er der Holkahesten og westien Muffi, som allerede er i gang med vægtene i vores nye fitnesscenter, før det overhovedet er færdigt.</p>
+<h2>En præmie hver dag</h2>
+<p>Hver dag fra 1. til 24. december er der en præmie. Det kan være gavekort til Førder, fadøl på Jylkat, brunch på Klippen Grevens Dal, en måned i fitnesscentret eller Martins nye bog. Præmierne hentes i Førder, for vi vil hellere se folk i butikken end sende pakker med posten.</p>
+<p>Man er med, når man skriver sig op til vores nyhedsbrev. Så kan man også følge med i, hvad der sker hos os resten af året.</p>
+<h2>AI klarer resten</h2>
+<p>Jeg har bygget det hele sammen med AI, fra tegningen og lågerne til alt det, man ikke ser.</p>
+<p>Hver morgen klokken 7 får dem, der har bedt om det, en mail om dagens låge. Lidt senere bliver der trukket en vinder til gårsdagens låge helt automatisk, og vinderen får en mail. Er præmien et gavekort, bliver det lavet og sendt med det samme i <a href="/historier/eget-gavekortsystem">vores eget gavekortsystem</a>.</p>
+<p>Før havde sådan en kalender krævet et bureau og en programmør. Nu kunne jeg lave den selv, på vores egen måde.</p>
+<p>Kalenderen åbner 1. december på <a href="https://www.hotelklippen.com/julekalender">hotelklippen.com/julekalender</a>. Du kan allerede nu skrive dig op, så du får besked, når den første låge åbner.</p>
+<p>Du kan se alle mine steder <a href="/mine-steder">her</a>.</p>"""),
     dict(slug="founderbasen", dato="21. november 2026", iso="2026-11-21",
          titel="Founderbasen: hvor iværksættere finder deres forretningspartner",
          intro="Mange gode idéer bliver aldrig til noget, fordi den, der har idéen, står alene. Derfor har Martin og jeg lavet Founderbasen.",
