@@ -268,7 +268,7 @@ STEDER = page("mine-steder", "Mine steder – Jannie Buch Thorborg",
 
 POSTS = [
     dict(slug="julekalender", dato="28. november 2026", iso="2026-11-28",
-         titel="Vi har tegnet Gudhjem som en gammeldags julekalender",
+         titel="Jeg har tegnet Gudhjem som en gammeldags julekalender",
          intro="I år har Klippen Hotel en julekalender på nettet med 24 låger, 24 små historier fra Gudhjem og en præmie hver dag. Jeg har bygget den med AI.",
          tekst="""<p>Jeg ville gerne lave en julekalender, der ligner de gamle danske papkalendere med nisser, juletræer og julemænd. Ikke noget, der ligner AI. Noget, man får lyst til at åbne hver morgen.</p>
 <p>Så det har jeg lavet til <a href="https://www.hotelklippen.com">Klippen Hotel</a>.</p>
